@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
@@ -20,8 +21,12 @@
     <body>
         <div class="container">
             <div class="hero-unit">
-                <h1>'Allo, 'Allo!</h1>
-                <h3>Enjoy coding! - Yeoman</h3>
+                <h1>Choose range</h1>
+                <form>
+                    <input type="text" placeholder="start" class="form-control" autofocus></input>
+                    <input type="text" placeholder="end" class="form-control"></input>
+                    <button class="btn btn-primary btn-large">Find them all</button>
+                </form>
             </div>
         </div>
 

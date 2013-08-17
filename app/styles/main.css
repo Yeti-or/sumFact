@@ -1,12 +1,6 @@
-body {
-    background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #333;
-}
 
 .hero-unit {
     margin: 50px auto 0 auto;
-    width: 300px;
     font-size: 18px;
     font-weight: 200;
     line-height: 30px;
@@ -15,10 +9,16 @@ body {
     padding: 60px;
 }
 
-.hero-unit h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+.container {
+    max-width: 600px;
+}
+
+form {
+    width: 60%;
+}
+
+.form-control {
+    margin: 10px auto 10px auto;
 }
 
 .browsehappy {
