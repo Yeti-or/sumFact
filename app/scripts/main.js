@@ -18,7 +18,14 @@ var checkingFn = function(from,to){
     }
     console.log('ok');
     console.log(result);
+    return result;
 };
 
-checkingFn(0,1000);
-console.log(getFactorial(5));
+//checkingFn(0,1000);
+
+var go  = function(){
+    var start = parseInt(document.getElementById('start').value,10);
+    var end = parseInt(document.getElementById('end').value,10);
+    checkingFn(start,end);
+    event.preventDefault();
+};

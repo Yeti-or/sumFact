@@ -22,10 +22,11 @@
         <div class="container">
             <div class="hero-unit">
                 <h1>Choose range</h1>
+                <img src="images/load.gif" class="pull-right">
                 <form>
-                    <input type="text" placeholder="start" class="form-control" autofocus></input>
-                    <input type="text" placeholder="end" class="form-control"></input>
-                    <button class="btn btn-primary btn-large">Find them all</button>
+                    <input type="text" placeholder="start" class="form-control" id="start" value="0"/>
+                    <input type="text" placeholder="end" class="form-control" autofocus id="end" value="1000"/>
+                    <button class="btn btn-primary btn-large" onclick="go()">Find them all</button>
                 </form>
             </div>
         </div>
