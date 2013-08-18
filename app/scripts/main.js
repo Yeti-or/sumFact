@@ -1,4 +1,3 @@
-console.log('\'Allo \'Allo!');
 
 var getFactorial = function(num){
     if(num === 0) return 1;
@@ -13,7 +12,6 @@ var checkingFn = function(from,to){
         for(var j=numbers.length;j--;){
             sum += getFactorial(parseInt(numbers[j],10));
         }
-        console.log(i+'_'+sum);
         if(i === sum){ result.push(i); }
     }
     console.log('ok');
@@ -24,8 +22,13 @@ var checkingFn = function(from,to){
 //checkingFn(0,1000);
 
 var go  = function(){
+    event.preventDefault();
     var start = parseInt(document.getElementById('start').value,10);
     var end = parseInt(document.getElementById('end').value,10);
-    checkingFn(start,end);
-    event.preventDefault();
+    var resultNode = document.getElementById('result');
+    resultNode.innerHTML = '';
+    setTimeout(function(){
+        var resultVal = checkingFn(start,end);
+        resultNode.innerHTML = resultVal;
+    },0);
 };
