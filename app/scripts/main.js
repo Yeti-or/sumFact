@@ -19,16 +19,24 @@ var checkingFn = function(from,to){
     return result;
 };
 
-//checkingFn(0,1000);
+var startNode;
+var endNode;
+var resulrNode;
 
 var go  = function(){
     event.preventDefault();
-    var start = parseInt(document.getElementById('start').value,10);
-    var end = parseInt(document.getElementById('end').value,10);
-    var resultNode = document.getElementById('result');
+    var start = parseInt(startNode.value,10);
+    var end = parseInt(endNode.value,10);
     resultNode.innerHTML = '';
     setTimeout(function(){
         var resultVal = checkingFn(start,end);
         resultNode.innerHTML = resultVal;
     },0);
+};
+
+window.onload = function(){
+    startNode = document.getElementById('start');
+    endNode = document.getElementById('end');
+    resultNode = document.getElementById('result');
+    go();
 };
